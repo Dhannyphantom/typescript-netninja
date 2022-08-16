@@ -10,10 +10,13 @@
     <h1>Finance Logger</h1>
 
     <form>
-      <select>
-        <option>Invoice</option>
-        <option>Payment</option>
+      <select name="selector">
+        <option value="invoice">Invoice</option>
+        <option value="payment">Payment</option>
       </select>
+      <input name="amount" type="number" placeholder="enter amount" />
+      <input name="username" type="text" placeholder="enter name" />
+      <button type="button">Submit</button>
     </form>
 
     <script src="sandbox.js"></script>
