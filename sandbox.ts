@@ -1,35 +1,11 @@
-// READY FOR LESSONS
-let sum = (a: number, b: number): number => {
-  return a + b;
-};
+// DYNAMICS;
+// But only use when you're not sure what the type is.
+let age: any = 50;
 
-const result = sum(3, 6);
+age = "Daniel";
 
-console.log(result);
+let mixed: any[] = [];
 
-// EXPLICIT TYPES
-let str: string;
-let num: number;
-let bool: boolean;
+mixed.push(1, "2", false, { name: "Dan" }, [1, 2, 3]);
 
-// ARRAYS
-let arrNum: number[];
-let arrStr: string[];
-
-let arrObj: { name: string; age: number }[] = [];
-
-// let obj: object;
-let obj: { name: string; age: number };
-
-obj = { name: "dan", age: 30 };
-
-// arrObj.push({name: "yoshi"});
-arrObj.push(obj);
-
-obj.name = "Yello";
-
-// UNION TYPE
-let UID: string | number;
-
-UID = "43fdbhfbs4";
-UID = 434;
+console.table({ mixed, age });
