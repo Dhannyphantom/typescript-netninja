@@ -1,20 +1,13 @@
 "use strict";
-// FUNCTION BASICS
-// MINE
-let sum;
-// sum = 1;
-// sum  = "Dane";
-sum = () => {
-    console.log("calculated!");
+const logDetails = (uid, item) => {
+    return `${item.toLocaleUpperCase()} has ${uid} unique id`;
 };
-let voidFunc;
-voidFunc = () => {
-    console.log("Hello");
-    return "hello world";
+const greet = (user) => {
+    return `${user.name} says Hello!`;
 };
-console.log(voidFunc());
-// optional params
-let sumValue = (a, b, c) => {
-    return a + b;
+console.log(logDetails(324, "Boom box"));
+let dany = {
+    uid: "34",
+    name: "Daniel",
 };
-console.log(sumValue(2, 4));
+console.log(greet(dany));

@@ -1,28 +1,19 @@
-// FUNCTION BASICS
-// MINE
+type strNum = string | number;
+type user = { uid: strNum; name: string };
 
-let sum: Function;
-
-// sum = 1;
-// sum  = "Dane";
-
-sum = () => {
-  console.log("calculated!");
+const logDetails = (uid: strNum, item: string) => {
+  return `${item.toLocaleUpperCase()} has ${uid} unique id`;
 };
 
-let voidFunc: () => void;
-
-voidFunc = () => {
-  console.log("Hello");
-  return "hello world";
+const greet = (user: user) => {
+  return `${user.name} says Hello!`;
 };
 
-console.log(voidFunc());
+console.log(logDetails(324, "Boom box"));
 
-// optional params
-
-let sumValue = (a: number, b: number, c?: string) => {
-  return a + b;
+let dany = {
+  uid: "34",
+  name: "Daniel",
 };
 
-console.log(sumValue(2, 4));
+console.log(greet(dany));
