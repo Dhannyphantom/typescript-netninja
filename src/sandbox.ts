@@ -1,8 +1,28 @@
-let age: any;
+// FUNCTION BASICS
+// MINE
 
-age = 60;
-console.log("hello");
+let sum: Function;
 
-console.clear();
-console.log(age);
-console.log(age + 4);
+// sum = 1;
+// sum  = "Dane";
+
+sum = () => {
+  console.log("calculated!");
+};
+
+let voidFunc: () => void;
+
+voidFunc = () => {
+  console.log("Hello");
+  return "hello world";
+};
+
+console.log(voidFunc());
+
+// optional params
+
+let sumValue = (a: number, b: number, c?: string) => {
+  return a + b;
+};
+
+console.log(sumValue(2, 4));
