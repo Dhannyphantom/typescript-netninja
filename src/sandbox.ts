@@ -1,19 +1,33 @@
-type strNum = string | number;
-type user = { uid: strNum; name: string };
+let greet: (a: string, b: string) => void;
 
-const logDetails = (uid: strNum, item: string) => {
-  return `${item.toLocaleUpperCase()} has ${uid} unique id`;
+greet = (name, greeting) => {
+  console.log(`${name} says ${greeting.toLowerCase()}`);
+  return "hello";
 };
 
-const greet = (user: user) => {
-  return `${user.name} says Hello!`;
+greet("Daniel", "Wassup");
+
+type Person = {
+  name: string;
+  uid: string | number;
+  age: number;
 };
 
-console.log(logDetails(324, "Boom box"));
+let formatPerson: (a: Person) => Person;
 
-let dany = {
-  uid: "34",
+const firstPerson: Person = {
+  age: 50,
   name: "Daniel",
+  uid: "134fjd",
 };
 
-console.log(greet(dany));
+formatPerson = (student) => {
+  student.name = student.name.toUpperCase();
+  console.log(student.age.toFixed(1));
+  student.age = Number(student.age.toFixed(1));
+
+  return student;
+};
+
+console.clear();
+console.log(formatPerson(firstPerson));

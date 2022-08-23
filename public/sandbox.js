@@ -1,13 +1,21 @@
 "use strict";
-const logDetails = (uid, item) => {
-    return `${item.toLocaleUpperCase()} has ${uid} unique id`;
+let greet;
+greet = (name, greeting) => {
+    console.log(`${name} says ${greeting.toLowerCase()}`);
+    return "hello";
 };
-const greet = (user) => {
-    return `${user.name} says Hello!`;
-};
-console.log(logDetails(324, "Boom box"));
-let dany = {
-    uid: "34",
+greet("Daniel", "Wassup");
+let formatPerson;
+const firstPerson = {
+    age: 50,
     name: "Daniel",
+    uid: "134fjd",
 };
-console.log(greet(dany));
+formatPerson = (student) => {
+    student.name = student.name.toUpperCase();
+    console.log(student.age.toFixed(1));
+    student.age = Number(student.age.toFixed(1));
+    return student;
+};
+console.clear();
+console.log(formatPerson(firstPerson));
